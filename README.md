@@ -1,0 +1,2 @@
+# cowsay-gofore-slackbot
+Moo
