@@ -16,6 +16,6 @@ def fortune():
 
 
 # Cowsay wrapper
-def cowsay(str, animal):
+def cowsay(say, animal):
     """Simple wrapper for cowsay"""
-    return exec_proc(["cowsay", "-f", animal, str])
+    return exec_proc(["cowsay", "-f", animal, say])
