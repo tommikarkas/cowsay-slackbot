@@ -16,6 +16,17 @@ def fortune():
 
 
 # Cowsay wrapper
-def cowsay(say, animal):
+def cowsay(say, animal="default"):
     """Simple wrapper for cowsay"""
-    return exec_proc(["cowsay", "-f", animal, say])
+    if (animal in list_cowfiles()):
+        return exec_proc(["cowsay", "-f", animal, say])
+    else:
+        raise Exception("Invalid cowfile")
+
+
+def list_cowfiles():
+    """Gets a list of available cowfiles"""
+    output = exec_proc(["cowsay", "-l"])
+    lines = output.split("\n")
+    cowfiles = " ".join(lines[1:][:-1]).split(" ")
+    return cowfiles
