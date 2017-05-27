@@ -21,3 +21,5 @@ Moo
             (__)\       )\/\
                 ||----w |
                 ||     ||
+
+![Mansikki in action](https://vrpl.github.com/images/mansikkibot-screenshot.png)
