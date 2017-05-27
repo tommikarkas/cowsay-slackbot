@@ -22,4 +22,5 @@ Moo
                 ||----w |
                 ||     ||
 
-![Mansikki in action](https://vrpl.github.com/images/mansikkibot-screenshot.png)
+## Screenshot
+![Mansikki in action](https://vrpl.github.io/images/mansikkibot-screenshot.png)
