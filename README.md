@@ -22,5 +22,17 @@ Moo
                 ||----w |
                 ||     ||
 
+## Usage in Slack
+
+Bot responds with the text that was in the message when it is mentioned or a direct message is sent to it.
+
+Commands:
+- `!fortune` - Says a fortune. Can be combined with !cowfile but no other text.
+- `!cowfile:<cowfile>` - Uses a specific cowfile.
+
+TODO: 
+- Make the bot say things on a channel based on instructions given to it in a direct message.
+- Something something something
+
 ## Screenshot
 ![Mansikki in action](https://vrpl.github.io/images/mansikkibot-screenshot.png)
