@@ -38,6 +38,9 @@ Your friendly neighbourhood slackbot using cowsay, wrapping few things together:
   - BOT_NAME - Username of the bot (like: mansikkibot)
   - SLACK_BOT_TOKEN - Bot token
 
+- Optionals:
+  - COWPATH - You may change the path variable and include the seppo cowfile included in this repository
+
 ## Usage in Slack
 
 Bot responds with the text that was in the message when it is mentioned or a direct message is sent to it.
