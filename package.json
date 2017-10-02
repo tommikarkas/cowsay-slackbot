@@ -1,0 +1,23 @@
+{
+  "name": "cowsay-slackbot",
+  "version": "1.0.0",
+  "description": "Requirements for development:",
+  "main": "index.js",
+  "dependencies": {
+    "routahe": "^0.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommikarkas/cowsay-slackbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommikarkas/cowsay-slackbot/issues"
+  },
+  "homepage": "https://github.com/tommikarkas/cowsay-slackbot#readme"
+}

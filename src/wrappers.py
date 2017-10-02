@@ -14,6 +14,9 @@ def fortune():
     """Simple wrapper for 'fortune'. No args"""
     return exec_proc(["fortune"])
 
+def routahe(addressA, addressB):
+    """Routahe use wrapper. Requires routahe npm package to be installed"""
+    return exec_proc(["routahe", addressA, addressB])
 
 # Cowsay wrapper
 def cowsay(say, animal="default"):
