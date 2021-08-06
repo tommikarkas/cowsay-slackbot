@@ -41,6 +41,8 @@ Your friendly neighbourhood slackbot using cowsay, wrapping few things together:
 - Optionals:
   - COWPATH - You may change the path variable and include the seppo cowfile included in this repository
 
+For your convenience the project supports .env file for providing the environment variable to your application during the initialization.
+
 ## Usage in Slack
 
 Bot responds with the text that was in the message when it is mentioned or a direct message is sent to it.
