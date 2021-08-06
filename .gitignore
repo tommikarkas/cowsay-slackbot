@@ -90,3 +90,7 @@ mansikkibot
 
 # Rope project settings
 .ropeproject
+
+# Intellij IDEA
+.idea
+#
