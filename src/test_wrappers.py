@@ -1,7 +1,7 @@
-from wrappers import *;
+from src.wrappers import cowsay, fortune, list_cowfiles, routahe
 
+# Replace with real tests
 
-# Testing
 out = cowsay(fortune(), "turkey")
 print(out)
 
