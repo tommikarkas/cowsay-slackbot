@@ -1,6 +1,4 @@
 import os
-import time
-import re
 import argparse
 import shlex
 from slackbot import Bot
@@ -8,8 +6,9 @@ from CowfileAction import CowfileAction
 from FortuneAction import FortuneAction
 from RoutaheAction import RoutaheAction
 from wrappers import list_cowfiles, cowsay
+from dotenv import load_dotenv
 
-from slackclient import SlackClient
+load_dotenv()  # take environment variables from .env.
 
 
 class MansikkiBot(Bot):
