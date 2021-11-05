@@ -15,27 +15,21 @@ load_dotenv()  # take environment variables from .env.
 
 class MansikkiBot(Bot):
     # use argparse for parsing the message
-    _parser = argparse.ArgumentParser(
-        description="See documentation for correct arguments", prefix_chars="!"
-    )
+    _parser = argparse.ArgumentParser(description="See documentation for correct arguments", prefix_chars="!")
 
     def __init__(self, bot_name, bot_token):
 
         self._parser.add_argument("!cowsay", action="store_true")
         self._parser.add_argument("!fortune", action=FortuneAction, nargs=0)
         choices = list_cowfiles()
-        self._parser.add_argument(
-            "!cowfile", action=CowfileAction, nargs=1, choices=choices
-        )
+        self._parser.add_argument("!cowfile", action=CowfileAction, nargs=1, choices=choices)
         self._parser.add_argument(
             "!routahe",
             action=RoutaheAction,
             nargs=2,
             metavar=('"From Address"', '"To Address"'),
         )
-        self._parser.add_argument(
-            "text", nargs="*", help="Message for the cowsay slackbot"
-        )
+        self._parser.add_argument("text", nargs="*", help="Message for the cowsay slackbot")
         Bot.__init__(self, bot_name, bot_token)
 
     # Override

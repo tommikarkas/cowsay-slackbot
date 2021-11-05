@@ -1,6 +1,4 @@
-from src.wrappers import cowsay, fortune, list_cowfiles, routahe
-
-# Replace with real tests
+from src.wrappers import cowsay, fortune, list_cowfiles, routahe  # type: ignore
 
 out = cowsay(fortune(), "turkey")
 print(out)

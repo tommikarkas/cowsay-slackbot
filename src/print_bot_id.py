@@ -1,6 +1,6 @@
 import os
 
-from slackclient import SlackClient
+from slackclient import SlackClient  # type: ignore
 
 BOT_NAME = "mansikkibot"
 

@@ -1,6 +1,6 @@
 import time
 
-from slackclient import SlackClient
+from slackclient import SlackClient  # type: ignore
 
 
 class Message:
@@ -50,9 +50,7 @@ class Bot:
 
     def say(self, channel, text):
         """Say a message to a channel"""
-        self.slack_client.api_call(
-            "chat.postMessage", channel=channel, text=text, as_user=True
-        )
+        self.slack_client.api_call("chat.postMessage", channel=channel, text=text, as_user=True)
 
     def handle_message(self, message):
         """Subclass to implement"""
