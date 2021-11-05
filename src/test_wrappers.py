@@ -1,7 +1,5 @@
-from wrappers import *;
+from src.wrappers import cowsay, fortune, list_cowfiles, routahe  # type: ignore
 
-
-# Testing
 out = cowsay(fortune(), "turkey")
 print(out)
 
