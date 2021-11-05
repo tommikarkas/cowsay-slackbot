@@ -21,6 +21,6 @@ jobs:
         pipenv install --dev --deploy
     - name: Lint the code
       run: |
-        flake8
-        mypy .
-        black --diff --check --fast .
+        python -m flake8
+        python -m mypy .
+        python -m black --diff --check --fast .
