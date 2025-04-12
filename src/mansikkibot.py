@@ -4,9 +4,9 @@ import shlex
 
 from dotenv import load_dotenv
 
-from CowfileAction import CowfileAction
-from FortuneAction import FortuneAction
-from RoutaheAction import RoutaheAction
+from cowfile_action import CowfileAction
+from fortune_action import FortuneAction
+from routahe_action import RoutaheAction
 from slackbot import Bot
 from wrappers import cowsay, list_cowfiles
 
