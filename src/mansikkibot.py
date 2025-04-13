@@ -72,7 +72,7 @@ class MansikkiBot(Bot):
                 print("ERROR: Argument parsing went wrong")
 
     def message_directed_to_bot(self, message):
-        return self.bot_id and message.sent_at(self.bot_id) or message.is_direct()
+        return (self.bot_id and message.sent_at(self.bot_id)) or message.is_direct()
 
 
 if __name__ == "__main__":
