@@ -7,7 +7,7 @@ def exec_proc(args):
     """Executes arguments and returns the output string"""
     proc = Popen(args, stdout=PIPE)
     outdata, errdata = proc.communicate()
-    return outdata
+    return outdata.decode("utf-8")
 
 
 def fortune():

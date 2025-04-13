@@ -40,7 +40,7 @@ class MansikkiBot(Bot):
         args = ""
 
         # Respond if message is @mansikkibot or on a direct message channel
-        if message.sent_at(self.bot_id) or message.is_direct():
+        if self.message_directed_to_bot(message):
 
             # Strip away the at-tag
             text = message.text.replace("<@" + self.bot_id + ">", "")
@@ -70,6 +70,9 @@ class MansikkiBot(Bot):
                         print(e)
             except Exception:
                 print("ERROR: Argument parsing went wrong")
+
+    def message_directed_to_bot(self, message):
+        return self.bot_id and message.sent_at(self.bot_id) or message.is_direct()
 
 
 if __name__ == "__main__":
