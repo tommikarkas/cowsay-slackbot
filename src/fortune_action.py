@@ -1,6 +1,6 @@
 from argparse import Action
 
-from wrappers import fortune
+from src.wrappers import fortune
 
 
 class FortuneAction(Action):
