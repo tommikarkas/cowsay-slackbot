@@ -36,7 +36,7 @@ def exec_proc(args):
     except CalledProcessError:
         raise  # Re-raise the CalledProcessError
     except Exception as e:
-        raise Exception(f"Failed to execute command {args}: {str(e)}")
+        raise Exception(f"Failed to execute command {args}: {str(e)}") from e
 
 
 def fortune():
