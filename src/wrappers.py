@@ -1,13 +1,42 @@
 """Wrapper functions for cowsay and fortune"""
 
-from subprocess import PIPE, Popen
+from subprocess import PIPE, CalledProcessError, Popen
 
 
 def exec_proc(args):
-    """Executes arguments and returns the output string"""
-    proc = Popen(args, stdout=PIPE)
-    outdata, errdata = proc.communicate()
-    return outdata
+    """Executes arguments and returns the output string
+
+    Args:
+        args (list): List of command arguments to execute
+
+    Returns:
+        str: Decoded output from the command
+
+    Raises:
+        CalledProcessError: If the command returns a non-zero exit code
+        UnicodeDecodeError: If the output cannot be decoded as UTF-8
+        Exception: For other unexpected errors
+    """
+    try:
+        proc = Popen(args, stdout=PIPE, stderr=PIPE)
+        outdata, errdata = proc.communicate()
+
+        # Check if the command failed
+        if proc.returncode != 0:
+            error_message = errdata.decode('utf-8', errors='replace') if errdata else "Unknown error"
+            raise CalledProcessError(proc.returncode, args, error_message)
+
+        # Try to decode the output
+        try:
+            return outdata.decode("utf-8")
+        except UnicodeDecodeError:
+            # If UTF-8 fails, try to decode with replacement characters
+            return outdata.decode("utf-8", errors="replace")
+
+    except CalledProcessError:
+        raise  # Re-raise the CalledProcessError
+    except Exception as e:
+        raise Exception(f"Failed to execute command {args}: {str(e)}") from e
 
 
 def fortune():
