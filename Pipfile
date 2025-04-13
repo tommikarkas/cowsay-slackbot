@@ -18,7 +18,8 @@ python-dotenv = "*"
 
 [dev-packages]
 mypy = "*"
-black = "==21.10b0"
+black = "==24.1.1"
+click = "==8.1.7"
 isort = "*"
 flake8 = "*"
 
