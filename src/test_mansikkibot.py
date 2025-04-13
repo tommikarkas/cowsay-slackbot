@@ -7,7 +7,7 @@ from src.mansikkibot import MansikkiBot
 
 
 class TestMansikkibot(unittest.TestCase):
-    """Test cases for Mansikkibot class"""
+    """Test cases for MansikkiBot class"""
 
     @classmethod
     def setUpClass(cls):
@@ -15,7 +15,6 @@ class TestMansikkibot(unittest.TestCase):
         cls.bot_name = "test_bot"
         cls.bot_token = "test_token"
         cls.bot_id = "mansikkibot"
-        
         # Create the bot and mock its ID
         cls.bot = MansikkiBot(cls.bot_name, cls.bot_token)
         cls.bot.bot_id = cls.bot_id
@@ -66,7 +65,6 @@ class TestMansikkibot(unittest.TestCase):
             mock_fortune.return_value = "Test fortune message"
             self.bot.handle_message(message)
             self.bot.say.assert_called_once()
-            
             self.assertTrue("Test fortune message" in self.bot.say.call_args[0][1])
 
     def test_handle_message_routahe(self):
@@ -110,4 +108,4 @@ class TestMansikkibot(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main() 
+    unittest.main()
